@@ -1,0 +1,116 @@
+{% extends '/php/homepage.php.twig' %}
+
+{% block header %}
+
+
+<style>
+    * {
+    font-family: Inter;
+  }
+
+/* -------- mobile -------- */
+
+@media only screen and (max-width: 600px) {
+
+    h1{
+    text-transform: uppercase;
+    font-size: 4vw;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header{
+        padding-top: 1vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+/* -------- pc -------- */
+
+@media only screen and (min-width: 600px) {
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+
+    h1{
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    margin-left: 1vw;
+    margin-right: 3vw;
+    font-weight: 900;
+    }
+
+    .menu{
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        font-size: .9vw;    
+    }
+
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header{
+        padding-top: 2vw;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: black solid .1vw;
+        padding-bottom: 2vw;
+    }
+
+    li{
+        margin-right: 3vw;
+        color: white;
+    }
+}
+
+</style>
+
+
+
+<header>
+        <div class="logo">
+            <a href="{{ path ('app_homepage') }}"><img src="../img/logo.png"></a>
+            <a href="{{ path ('app_homepage') }}"><h1>Puy-l'évèque</h1></a>
+        </div>
+       <div class="menu">
+            <li>
+                <a href="">Mes démarches</a>  
+            </li>
+            <li>
+                <a href="">Infos pratiques</a>  
+            </li>
+            <li>
+                <a href="">Annuaire</a>  
+            </li>
+            <li>
+                <a href="">Actualités</a>  
+            </li>
+            <li>
+                <a href="">Vivre à puy-lévèque</a>  
+            </li>
+            <li>
+                <a href="{{ path ('app_agenda') }}">Agenda</a>  
+            </li>
+       </div>
+    </header>
+
+{% endblock %}
