@@ -56,7 +56,9 @@
         text-transform: uppercase;
         display: flex;
         flex-direction: row;
-        font-size: .9vw;    
+        font-size: .7vw;    
+        align-items: center;
+        justify-content: space-around;
     }
 
     .logo{
@@ -66,14 +68,14 @@
     }
 
     header{
-        padding-top: 2vw;
+        padding-top: .5vw;
         width: 100%;
         justify-content: center;
         display: flex;
         flex-direction: row;
         align-items: center;
         border-bottom: black solid .1vw;
-        padding-bottom: 2vw;
+        padding-bottom: 1vw;
     }
 
     li{
@@ -86,11 +88,7 @@
 
 
 
-<header>
-        <div class="logo">
-            <a href="{{ path ('app_homepage') }}"><img src="../img/logo.png"></a>
-            <a href="{{ path ('app_homepage') }}"><h1>Puy-l'évèque</h1></a>
-        </div>
+<header>  
        <div class="menu">
             <li>
                 <a href="">Mes démarches</a>  
@@ -101,6 +99,8 @@
             <li>
                 <a href="">Annuaire</a>  
             </li>
+            <a href="{{ path ('app_homepage') }}"><img src="../img/logo.png"></a>
+            <a href="{{ path ('app_homepage') }}"><h1>Puy-l'évèque</h1></a>
             <li>
                 <a href="">Actualités</a>  
             </li>
@@ -111,6 +111,6 @@
                 <a href="{{ path ('app_agenda') }}">Agenda</a>  
             </li>
        </div>
-    </header>
+</header>
 
 {% endblock %}
